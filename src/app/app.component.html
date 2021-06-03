@@ -1,7 +1,3 @@
-<!--
-
-<app-movie [movies]="movieList.length > 0 ? movieList : movies"></app-movie> -->
-
 <app-header></app-header>
 <app-search (newFilterEvent)="findMovie($event)"></app-search>
 <app-movies-list [movies]="movieList.length > 0 ? movieList : movies"></app-movies-list>

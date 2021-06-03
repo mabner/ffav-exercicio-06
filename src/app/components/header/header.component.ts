@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  header = 'Movies App';
+  header = 'Exercício 6 - The Movie Database';
 
   constructor() {}
 

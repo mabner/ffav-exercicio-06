@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #b0003c;
+}
+
+.page-title {
+  text-align: center;
+  color: #f8f739;
+}
+
+.movie-card {
+  padding: 10px;
+  text-align: center;
+  width: 80%;
+}
+
+.movie-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.movie-info {
+  padding-bottom: 6px;
+  color: #f8f739;
+}
+
+.movie-title {
+  font-size: large;
+  font-weight: bold;
+}
+
+.movie-release {
+  font-size: medium;
+}
+
+.movie-votes {
+  font-size: medium;
+}
+
+.movie-backdrop {
+  border-radius: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.search-bar {
+  text-align: center;
+  padding: 10px 20px;
+}
