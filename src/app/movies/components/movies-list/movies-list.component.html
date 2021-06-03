@@ -1,0 +1,10 @@
+<section class="movies-container">
+    <ul>
+        <li *ngFor="let movie of movies">{{movie.title}}
+            <br /> <img src="{{BASE_URL_IMAGE + movie.backdrop_path}}" alt="" />
+        </li>
+
+    </ul>
+</section>
+
+<!-- Incluir os movie items -->
