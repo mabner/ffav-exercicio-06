@@ -8,7 +8,7 @@ import { MoviesService } from '../../services/movies.service';
   styleUrls: ['./movies-list.component.css'],
 })
 export class MoviesListComponent implements OnInit {
-  private BASE_URL_IMAGE = `https://image.tmdb.org/t/p/original`;
+  private BASE_URL_IMAGE = `https://image.tmdb.org/t/p/w200`;
   @Input() movies: Array<IMovieItem> = [];
   constructor(private moviesService: MoviesService) {}
 
