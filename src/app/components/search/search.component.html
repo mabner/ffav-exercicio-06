@@ -1,3 +1,24 @@
+<div data-toggle="buttons">
+<p>Odernar por:</p>
+
+<form
+  [(ngModel)]="movieOrder"
+  name="movieOrder"
+  (ngModelChange)="onSelectChange($event)"
+  class="form-control"
+>
+
+    <label>
+      <input type="radio" formControlName="orderVotes" value="orderVotes" />
+      Votos
+    </label>
+    <label>
+      <input type="radio" formControlName="orderTitle" value="orderTitle" />
+      Título
+    </label>
+  </form>
+  </div>
+
 <!-- [(ngModel)] - Two-way binding, field is both input and output -->
 <div class="search-bar">
   <form>

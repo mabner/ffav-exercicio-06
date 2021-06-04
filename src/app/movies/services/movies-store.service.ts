@@ -1,9 +1,22 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MoviesStoreService {
+  constructor() {}
+  private readonly _movieOrder = new BehaviorSubject([]);
+  readonly orderedList$ = this._movieOrder.asObservable();
 
-  constructor() { }
+  private get movieOrder() {
+    return this._movieOrder.getValue();
+  }
+
+  private set movieOrder(movie) {
+    this._movieOrder.next(movie);
+  }
+  arrangeList(movieOrder) {
+    this.movieOrder = [movieOrder];
+  }
 }
