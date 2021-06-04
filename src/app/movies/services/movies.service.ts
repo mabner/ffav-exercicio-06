@@ -14,4 +14,10 @@ export class MoviesService {
       `${this.BASE_URL}/movie/popular?api_key=${this.API_KEY}`
     );
   }
+
+  getMovieDetail(id): Observable<any> {
+    return this.http.get(
+      `${this.BASE_URL}/movie/${id}?api_key=${this.API_KEY}`
+    );
+  }
 }
