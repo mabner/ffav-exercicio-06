@@ -1,1 +1,26 @@
-<p>movie-details works!</p>
+<!-- Get layout from React movie app -->
+<section>
+  <div>
+    <div>
+      <h1>{{ movie.title }}</h1>
+      <h3>{{ movie.tagline }}</h3>
+      <p>{{ movie.overview }}</p>
+      <p>Data de lançamento: {{ movie.release_date }}</p>
+      <p>Média de votos: {{ movie.vote_average }}</p>
+    </div>
+
+    <div>
+      <img class="movie-backdrop" src="{{ backdropURL + movie.poster_path }}" />
+    </div>
+    <div>
+      <img
+        class="movie-poster"
+        src="{{ BASE_URL_IMAGE + movie.poster_path }}"
+        alt=""
+      />
+    </div>
+    <div>
+      <a routerLink="/">Home</a>
+    </div>
+  </div>
+</section>
