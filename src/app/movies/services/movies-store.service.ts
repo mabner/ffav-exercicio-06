@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class MoviesStoreService {
   constructor() {}
   private readonly _movieOrder = new BehaviorSubject([]);
-  readonly orderedList$ = this._movieOrder.asObservable();
+  readonly movieOrder$ = this._movieOrder.asObservable();
 
   private get movieOrder() {
     return this._movieOrder.getValue();

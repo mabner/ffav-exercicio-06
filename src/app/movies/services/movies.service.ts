@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IMovieApiResult } from '../models/IMovieApiResult';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class MoviesService {
   private API_KEY = 'd416af5d4faee64e25ab001d87aab5c3';
   private BASE_URL = 'https://api.themoviedb.org/3';
