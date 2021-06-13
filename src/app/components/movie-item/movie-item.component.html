@@ -1,16 +1,16 @@
 <section class="grid-container">
-    <div class="movie-info">
-      <div class="movie-title">{{ movie.title }}</div>
-      <div>ID: {{ movie.id }}</div>
-      <div class="movie-release">{{ movie.release_date }}</div>
-      <div class="movie-votes">Votos: {{ movie.vote_count }}</div>
-      <a [routerLink]="['/movie', movie.id]">Detalhes</a>
-    </div>
-    <div>
-      <img
-        class="movie-poster"
-        src="{{ BASE_URL_IMAGE + movie.poster_path }}"
-        alt="Poster do filme {{ movie.title }}"
-      />
-    </div>
+  <div class="movie-info">
+    <div class="movie-title">{{ movie.title }}</div>
+    <div>ID: {{ movie.id }}</div>
+    <div class="movie-release">{{ movie.release_date }}</div>
+    <div class="movie-votes">Votos: {{ movie.vote_count }}</div>
+    <a [routerLink]="['/movie', movie.id]">Detalhes</a>
+  </div>
+  <div>
+    <img
+      class="movie-poster"
+      src="{{ BASE_URL_IMAGE + movie.poster_path }}"
+      alt="Poster do filme {{ movie.title }}"
+    />
+  </div>
 </section>

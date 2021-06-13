@@ -1,20 +1,29 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-@Component({
+@Component( {
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
-})
-export class SearchComponent implements OnInit {
+  styleUrls: [ './search.component.css' ],
+} )
+export class SearchComponent implements OnInit
+{
   @Output() filter = '';
   @Output() newFilterEvent = new EventEmitter<string>();
 
-  onInputChange(name: string) {
-    const handleString = name.charAt(0).toUpperCase() + name.substr(1);
-    this.newFilterEvent.emit(handleString);
+  @Output() orderBy = new EventEmitter<string>();
+
+  onInputChange ( name: string )
+  {
+    const handleString = name.charAt( 0 ).toUpperCase() + name.substr( 1 );
+    this.newFilterEvent.emit( handleString );
   }
 
-  constructor() {}
+  onOrderBy ( orderField: string ): void
+  {
+    this.orderBy.emit( orderField );
+  }
 
-  ngOnInit(): void {}
+  constructor () { }
+
+  ngOnInit (): void { }
 }

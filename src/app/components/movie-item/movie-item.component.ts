@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMovieItem } from '../../models/IMovieItem';
+import { IMovieItem } from 'src/app/models/IMovieItem';
 import { environment } from 'src/environments/environment';
 
 @Component( {
