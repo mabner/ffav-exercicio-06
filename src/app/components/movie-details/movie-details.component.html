@@ -4,9 +4,11 @@
     <div>
       <h1>{{ movie.title }}</h1>
       <h3>{{ movie.tagline }}</h3>
-      <p>{{ movie.overview }}</p>
       <p>Data de lançamento: {{ movie.release_date }}</p>
       <p>Média de votos: {{ movie.vote_average }}</p>
+      <br />
+      <p>{{ movie.overview }}</p>
+
     </div>
 
     <div>
@@ -24,4 +26,3 @@
     </div>
   </div>
 </section>
-<router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { MoviesService } from '../../movies/services/movies.service';
 
 @Component( {
@@ -9,8 +10,8 @@ import { MoviesService } from '../../movies/services/movies.service';
 } )
 export class MovieDetailsComponent implements OnInit
 {
-  BASE_URL_IMAGE = `https://image.tmdb.org/t/p/w200`;
-  backdropURL = `https://image.tmdb.org/t/p/original`;
+  BASE_URL_IMAGE = `${ environment.tbdb.IMAGE_URL }`;
+  backdropURL = `${ environment.tbdb.API_KEY }`;
   ID: Number;
   movie: any = {};
 

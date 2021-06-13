@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IMovieItem } from '../../movies/models/IMovieItem';
 import { MoviesService } from '../../movies/services/movies.service';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component( {
   selector: 'app-movies-list',
@@ -11,7 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MoviesListComponent implements OnInit
 {
   ID: Number;
-  BASE_URL_IMAGE = `https://image.tmdb.org/t/p/w200`;
+  BASE_URL_IMAGE = `${ environment.tbdb.IMAGE_URL }`;
   @Input() movies: Array<IMovieItem> = [];
 
   constructor (
