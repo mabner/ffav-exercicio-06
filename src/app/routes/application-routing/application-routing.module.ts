@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { MoviesListComponent } from 'src/app/movies/components/movies-list/movies-list.component';
 import { MovieDetailsComponent } from 'src/app/movies/components/movie-details/movie-details.component';
+import { MoviesListComponent } from 'src/app/movies/components/movies-list/movies-list.component';
 
 const routes: Routes = [
   { path: '', component: MoviesListComponent },
   { path: 'movies/:id', component: MovieDetailsComponent },
 ];
 
-@NgModule({
+@NgModule( {
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class ApplicationRoutingModule {}
+  imports: [ RouterModule.forRoot( routes ) ],
+  exports: [ RouterModule ],
+} )
+export class ApplicationRoutingModule { }
