@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IMovieItem } from './movies/models/IMovieItem';
-import { MoviesStoreService } from './movies/services/movies-store.service';
+import { MoviesStoreService } from './movies/store/movies-store.service';
 import { MoviesService } from './movies/services/movies.service';
 
 
