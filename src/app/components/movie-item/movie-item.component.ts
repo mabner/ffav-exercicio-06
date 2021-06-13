@@ -3,11 +3,11 @@ import { IMovieItem } from '../../models/IMovieItem';
 import { environment } from 'src/environments/environment';
 
 @Component( {
-  selector: 'app-movie-list',
-  templateUrl: './movie-list.component.html',
-  styleUrls: [ './movie-list.component.css' ],
+  selector: 'app-movie-item',
+  templateUrl: './movie-item.component.html',
+  styleUrls: [ './movie-item.component.css' ],
 } )
-export class MovieListComponent implements OnInit
+export class MovieItemComponent implements OnInit
 {
   @Input() BASE_URL_IMAGE: string = `${ environment.tbdb.IMAGE_URL }`;
   @Input() movie: IMovieItem;

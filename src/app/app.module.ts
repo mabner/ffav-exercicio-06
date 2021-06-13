@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { MoviesModule } from './modules/movies.module';
 import { ApplicationRoutingModule } from './routes/application-routing.module';
 
@@ -14,7 +14,7 @@ import { ApplicationRoutingModule } from './routes/application-routing.module';
     AppComponent,
     SearchComponent,
     HeaderComponent,
-    MovieListComponent,
+    MovieItemComponent,
     MovieDetailsComponent,
   ],
   imports: [BrowserModule, FormsModule, MoviesModule, ApplicationRoutingModule],

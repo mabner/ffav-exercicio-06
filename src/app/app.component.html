@@ -1,4 +1,5 @@
 <app-header></app-header>
-<app-search (newFilterEvent)="findMovie($event)"></app-search>
-<app-movies-list [movies]="movieList.length > 0 ? movieList : movies"></app-movies-list>
+<div class="movie-list">
+  <app-search (newFilterEvent)="findMovie($event)"></app-search>
+</div>
 <router-outlet></router-outlet>
