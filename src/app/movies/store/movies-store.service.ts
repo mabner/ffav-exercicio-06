@@ -1,22 +1,31 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { IMovieItem } from '../models/IMovieItem';
 
-@Injectable({
+@Injectable( {
   providedIn: 'root',
-})
-export class MoviesStoreService {
-  constructor() {}
-  private readonly _movieOrder = new BehaviorSubject([]);
-  readonly movieOrder$ = this._movieOrder.asObservable();
+} )
+export class MoviesStoreService
+{
+  constructor () { }
 
-  private get movieOrder() {
-    return this._movieOrder.getValue();
+  private readonly movieStore = new BehaviorSubject<IMovieItem[]>( [] );
+
+  public movies$ = this.movieStore.asObservable;
+
+  private get movies (): IMovieItem[]
+  {
+    return this.movieStore.getValue();
   }
 
-  private set movieOrder(movie) {
-    this._movieOrder.next(movie);
+  private set movies ( value: IMovieItem[] )
+  {
+    this.movieStore.next( value );
   }
-  arrangeList(movieOrder) {
-    this.movieOrder = [movieOrder];
+
+  public setMovies ( movies: IMovieItem[] )
+  {
+    this.movies = movies;
   }
+
 }
