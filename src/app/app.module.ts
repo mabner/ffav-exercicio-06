@@ -8,6 +8,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { MovieItemComponent } from './components/movie-item/movie-item.component';
 import { MoviesModule } from './modules/movies.module';
 import { ApplicationRoutingModule } from './routes/application-routing.module';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ApplicationRoutingModule } from './routes/application-routing.module';
     HeaderComponent,
     MovieItemComponent,
     MovieDetailsComponent,
+    MovieListComponent,
   ],
   imports: [BrowserModule, FormsModule, MoviesModule, ApplicationRoutingModule],
   providers: [],
