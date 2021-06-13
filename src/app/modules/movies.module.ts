@@ -4,10 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesService } from '../services/movies.service';
 import { MoviesStoreService } from '../store/movies-store.service';
 
-@NgModule({
+@NgModule( {
   declarations: [],
   exports: [],
-  imports: [CommonModule, HttpClientModule],
-  providers: [MoviesService, MoviesStoreService],
-})
-export class MoviesModule {}
+  imports: [ CommonModule, HttpClientModule ],
+  providers: [ MoviesService, MoviesStoreService ],
+} )
+export class MoviesModule { }

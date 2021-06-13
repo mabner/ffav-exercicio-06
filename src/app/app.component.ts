@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { IMovieItem } from './movies/models/IMovieItem';
-import { MoviesStoreService } from './movies/store/movies-store.service';
-import { MoviesService } from './movies/services/movies.service';
+import { IMovieItem } from './models/IMovieItem';
+import { MoviesStoreService } from './store/movies-store.service';
+import { MoviesService } from './services/movies.service';
 
 
 @Component({

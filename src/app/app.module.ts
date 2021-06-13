@@ -5,16 +5,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { MoviesListComponent } from './components/movies-list/movies-list.component';
-import { MoviesModule } from './movies/modules/movies.module';
-import { ApplicationRoutingModule } from './routes/application-routing/application-routing.module';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { MoviesModule } from './modules/movies.module';
+import { ApplicationRoutingModule } from './routes/application-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     HeaderComponent,
-    MoviesListComponent,
+    MovieListComponent,
     MovieDetailsComponent,
   ],
   imports: [BrowserModule, FormsModule, MoviesModule, ApplicationRoutingModule],
