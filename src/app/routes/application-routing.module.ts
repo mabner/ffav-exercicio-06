@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { MovieDetailsComponent } from 'src/app/components/movie-details/movie-details.component';
-import { MovieItemComponent } from 'src/app/components/movie-item/movie-item.component';
+import { Routes, RouterModule } from '@angular/router';
+import { MovieListComponent } from '../components/movie-list/movie-list.component';
+import { MovieDetailComponent } from '../components/movie-detail/movie-detail.component';
 
 const routes: Routes = [
-  { path: '', component: MovieItemComponent },
-  { path: 'movies/:id', component: MovieDetailsComponent },
+  { path: '', component: MovieListComponent },
+  { path: 'movie/:id', component: MovieDetailComponent },
 ];
 
 @NgModule( {
-  declarations: [],
   imports: [ RouterModule.forRoot( routes ) ],
-  exports: [ RouterModule ],
+  exports: [ RouterModule ]
 } )
-export class ApplicationRoutingModule { }
+export class AppRoutingModule { }

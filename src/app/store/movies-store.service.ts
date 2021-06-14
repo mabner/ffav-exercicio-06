@@ -3,24 +3,22 @@ import { BehaviorSubject } from 'rxjs';
 import { IMovieItem } from '../models/IMovieItem';
 
 @Injectable( {
-  providedIn: 'root',
+  providedIn: 'root'
 } )
 export class MoviesStoreService
 {
-  constructor () { }
 
-  private readonly movieStore = new BehaviorSubject<IMovieItem[]>( [] );
-
-  public movies$ = this.movieStore.asObservable;
+  private readonly moviesSubject = new BehaviorSubject<IMovieItem[]>( [] );
+  public movies$ = this.moviesSubject.asObservable;
 
   private get movies (): IMovieItem[]
   {
-    return this.movieStore.getValue();
+    return this.moviesSubject.getValue();
   }
 
   private set movies ( value: IMovieItem[] )
   {
-    this.movieStore.next( value );
+    this.moviesSubject.next( value );
   }
 
   public setMovies ( movies: IMovieItem[] )
@@ -28,4 +26,5 @@ export class MoviesStoreService
     this.movies = movies;
   }
 
+  constructor () { }
 }

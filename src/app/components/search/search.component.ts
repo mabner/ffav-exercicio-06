@@ -1,21 +1,22 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, Output, EventEmitter, } from '@angular/core';
 
 @Component( {
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: [ './search.component.css' ],
+  styleUrls: [ './search.component.css' ]
 } )
-export class SearchComponent implements OnInit
+export class SearchBarComponent
 {
-  @Output() filter = '';
-  @Output() newFilterEvent = new EventEmitter<string>();
 
+  movieFilter = '';
+  @Output() filterMovies = new EventEmitter<string>();
   @Output() orderBy = new EventEmitter<string>();
 
-  onInputChange ( name: string )
+  constructor () { }
+
+  onMovieFilter ( value: string ): void
   {
-    const handleString = name.charAt( 0 ).toUpperCase() + name.substr( 1 );
-    this.newFilterEvent.emit( handleString );
+    this.filterMovies.emit( value );
   }
 
   onOrderBy ( orderField: string ): void
@@ -23,7 +24,4 @@ export class SearchComponent implements OnInit
     this.orderBy.emit( orderField );
   }
 
-  constructor () { }
-
-  ngOnInit (): void { }
 }

@@ -5,16 +5,20 @@ import { environment } from 'src/environments/environment';
 @Component( {
   selector: 'app-movie-item',
   templateUrl: './movie-item.component.html',
-  styleUrls: [ './movie-item.component.css' ],
+  styleUrls: [ './movie-item.component.css' ]
 } )
 export class MovieItemComponent implements OnInit
 {
-  @Input() BASE_URL_IMAGE: string = `${ environment.tbdb.IMAGE_URL }`;
+
+  @Input() BASE_URL_IMAGE: string = `${ environment.tmdb.IMAGE_URL }`;
   @Input() movie: IMovieItem;
+
+
 
   constructor () { }
 
   ngOnInit (): void
   {
   }
+
 }

@@ -1,9 +1,11 @@
 <app-search
-  (newFilterEvent)="findMovie($event)"
+  (filterMovies)="onMovieFilter($event)"
   (orderBy)="onOrderBy($event)"
 ></app-search>
 <div class="movie-list">
-  <ng-container class="movie-card" styles *ngFor="let movie of filteredMovies">
-    <app-movie-item class="movie-item" [movie]="movie"> </app-movie-item>
-  </ng-container>
+  <div class="movie-card">
+    <div *ngFor="let movie of filterSet">
+      <app-movie-item class="movie-item" [movie]="movie"> </app-movie-item>
+    </div>
+  </div>
 </div>

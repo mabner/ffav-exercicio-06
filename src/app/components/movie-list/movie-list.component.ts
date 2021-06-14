@@ -1,25 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { IMovieItem } from '../../models/IMovieItem';
-import { MoviesStoreService } from '../../store/movies-store.service';
-import { MoviesService } from '../../services/movies.service';
 import { IMovieApiResult } from 'src/app/models/IMovieApiResult';
+import { IMovieItem } from 'src/app/models/IMovieItem';
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component( {
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrls: [ './movie-list.component.css' ]
+  styleUrls: [ './movie-list.component.css' ],
 } )
 export class MovieListComponent implements OnInit
 {
-
   movies: IMovieItem[];
-  filteredMovies: IMovieItem[];
-  moviesFilter: string;
+  filterSet: IMovieItem[];
+  movieFilter: string;
 
-  constructor (
-    private moviesStore: MoviesStoreService,
-    public movieService: MoviesService
-  ) { }
+  constructor ( public movieService: MoviesService ) { }
 
   ngOnInit (): void
   {
@@ -31,22 +26,22 @@ export class MovieListComponent implements OnInit
     this.movieService.getMovies().subscribe( ( movies: IMovieApiResult ) =>
     {
       this.movies = movies.results;
-      this.filteredMovies = movies.results;
+      this.filterSet = movies.results;
     } );
   }
 
-  findMovie ( valueFilter: string ): void
+  onMovieFilter ( valueFilter: string ): void
   {
-    this.filteredMovies = this.movies.filter( movie => movie.title.toLowerCase().includes( valueFilter.toLowerCase() ) );
+    this.filterSet = this.movies.filter( ( movie ) =>
+      movie.title.toLowerCase().includes( valueFilter.toLowerCase() )
+    );
   }
 
   onOrderBy ( orderField: string ): void
   {
-    console.log( this.filteredMovies );
-    this.filteredMovies.sort( ( a, b ) =>
+    this.filterSet.sort( ( movie1, movie2 ) =>
     {
-      return b[ orderField ] - a[ orderField ];
+      return movie2[ orderField ] - movie1[ orderField ];
     } );
   }
-
 }

@@ -1,28 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MovieListComponent } from './movie-item.component';
+import { MovieItemComponent } from './movie-item.component';
 
-describe( 'MovieListComponent', () =>
-{
-  let component: MovieListComponent;
-  let fixture: ComponentFixture<MovieListComponent>;
+describe('MovieItemComponent', () => {
+  let component: MovieItemComponent;
+  let fixture: ComponentFixture<MovieItemComponent>;
 
-  beforeEach( async () =>
-  {
-    await TestBed.configureTestingModule( {
-      declarations: [ MovieListComponent ],
-    } ).compileComponents();
-  } );
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ MovieItemComponent ]
+    })
+    .compileComponents();
+  }));
 
-  beforeEach( () =>
-  {
-    fixture = TestBed.createComponent( MovieListComponent );
+  beforeEach(() => {
+    fixture = TestBed.createComponent(MovieItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  } );
+  });
 
-  it( 'should create', () =>
-  {
-    expect( component ).toBeTruthy();
-  } );
-} );
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

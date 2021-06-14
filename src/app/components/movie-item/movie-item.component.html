@@ -2,7 +2,7 @@
   <div class="movie-info">
     <div class="movie-title">{{ movie.title }}</div>
     <div>ID: {{ movie.id }}</div>
-    <div class="movie-release">{{ movie.release_date }}</div>
+    <div class="movie-release">Estreia: {{ movie.release_date }}</div>
     <div class="movie-votes">Votos: {{ movie.vote_count }}</div>
     <a [routerLink]="['/movie', movie.id]">Detalhes</a>
   </div>
